@@ -23,7 +23,8 @@ find_nct7802() {
 board=$(board_name)
 
 case "$board" in
-gemtek,w1700k)
+gemtek,w1700k | \
+    gemtek,w1701k)
 	HWMON=$(find_nct7802)
 
 	# Disable automatic control temporarily to safely write settings
